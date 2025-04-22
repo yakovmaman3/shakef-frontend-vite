@@ -32,7 +32,7 @@ export default function HomePage() {
       </header>
 
       {/* Animated Text */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-6xl font-bold pt-20">
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-6xl font-bold pt-28">
         <div className="flex gap-6">
           {words.map((word, index) => (
             <motion.span
@@ -44,7 +44,7 @@ export default function HomePage() {
             </motion.span>
           ))}
         </div>
-        <p className="text-lg mt-10 text-gray-200 font-medium">
+        <p className="text-lg mt-8 text-gray-200 font-medium text-center px-4">
           שערים ● גדרות ● מעקות ● עבודות מתכת ייחודיות לפרויקטים פרטיים ועסקיים
         </p>
       </div>
