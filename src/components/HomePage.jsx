@@ -91,13 +91,10 @@ export default function HomePage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md shadow-md text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center p-4 gap-2">
           <div className="text-right">
-            <h1 className="text-4xl font-black tracking-tight leading-none text-white drop-shadow-lg">
-              שַׁקֵּף
-              <span className="block text-sm md:text-base font-light text-gray-300 tracking-wide mt-1">
-                ✦ עבודות מתכת ✦
-              </span>
+            <h1 className="text-4xl md:text-4xl font-extrabold text-white tracking-tight drop-shadow">
+              שַׁקֵּף <span className="text-lg font-light text-blue-200 ml-1">עבודות מתכת</span>
             </h1>
-            <p className="text-xs md:text-sm text-gray-300 mt-1">החוויה שלכם - הסיפוק שלנו</p>
+            <p className="text-xs md:text-sm text-gray-400 italic mt-1">החוויה שלכם – הסיפוק שלנו</p>
           </div>
           <nav className="flex flex-wrap justify-center md:justify-end gap-4 text-sm md:text-base font-medium">
             <button ref={lastClickedRef} onClick={(e) => { lastClickedRef.current = e.target; setSection("home"); }} className="hover:text-blue-400">דף הבית</button>
