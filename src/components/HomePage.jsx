@@ -1,10 +1,52 @@
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import GallerySection from "./GallerySection";
 import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
 
 export default function HomePage() {
   const [section, setSection] = useState("home");
+  const [visibleIndex, setVisibleIndex] = useState(0);
+  const words = ["איכות", "מקצועיות", "אמינות"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleIndex((prev) => (prev + 1) % words.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const renderSection = () => {
+    switch (section) {
+      case "gallery":
+        return <motion.div key="gallery" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><GallerySection /></motion.div>;
+      case "about":
+        return <motion.div key="about" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><AboutSection /></motion.div>;
+      case "contact":
+        return <motion.div key="contact" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><ContactSection /></motion.div>;
+      default:
+        return (
+          <div className="text-center py-20">
+            <h2 className="text-5xl font-bold mb-6">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={words[visibleIndex]}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                >
+                  {words[visibleIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </h2>
+            <p className="text-lg max-w-xl mx-auto text-gray-200">
+              שערים ● גדרות ● מעקות ● עבודות מתכת ייחודיות לפרויקטים פרטיים ועסקיים
+            </p>
+          </div>
+        );
+    }
+  };
 
   return (
     <div className="relative min-h-screen bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero.jpg)' }}>
@@ -25,18 +67,10 @@ export default function HomePage() {
       </header>
 
       {/* Content Area */}
-      <div className="pt-32 px-4 max-w-7xl mx-auto z-10 relative text-white">
-        {section === "home" && (
-          <div className="text-center py-20">
-            <h2 className="text-5xl font-bold mb-4">איכות ● מקצועיות ● אמינות</h2>
-            <p className="text-lg max-w-xl mx-auto text-gray-200">
-              שערים ● גדרות ● מעקות ● עבודות מתכת ייחודיות לפרויקטים פרטיים ועסקיים
-            </p>
-          </div>
-        )}
-        {section === "gallery" && <div className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><GallerySection /></div>}
-        {section === "about" && <div className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><AboutSection /></div>}
-        {section === "contact" && <div className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><ContactSection /></div>}
+      <div className="pt-32 px-4 max-w-7xl mx-auto z-10 relative text-white min-h-[60vh]">
+        <AnimatePresence mode="wait">
+          {renderSection()}
+        </AnimatePresence>
       </div>
     </div>
   );
