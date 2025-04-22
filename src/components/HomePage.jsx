@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import GallerySection from "./GallerySection";
 import AboutSection from "./AboutSection";
@@ -8,6 +8,7 @@ export default function HomePage() {
   const [section, setSection] = useState("home");
   const [visibleIndex, setVisibleIndex] = useState(0);
   const words = ["איכות", "מקצועיות", "אמינות"];
+  const wrapperRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,14 +17,21 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleClickOutside = (e) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+      setSection("home");
+    }
+  };
+
   const renderSection = () => {
+    const wrapperClasses = "bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto";
     switch (section) {
       case "gallery":
-        return <motion.div key="gallery" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><GallerySection /></motion.div>;
+        return <motion.div key="gallery" ref={wrapperRef} className={wrapperClasses} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><GallerySection /></motion.div>;
       case "about":
-        return <motion.div key="about" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><AboutSection /></motion.div>;
+        return <motion.div key="about" ref={wrapperRef} className={wrapperClasses} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><AboutSection /></motion.div>;
       case "contact":
-        return <motion.div key="contact" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto"><ContactSection /></motion.div>;
+        return <motion.div key="contact" ref={wrapperRef} className={wrapperClasses} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><ContactSection /></motion.div>;
       default:
         return (
           <div className="text-center py-20">
@@ -49,7 +57,11 @@ export default function HomePage() {
   };
 
   return (
-    <div className="relative min-h-screen bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero.jpg)' }}>
+    <div
+      className="relative min-h-screen bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: 'url(/images/hero.jpg)' }}
+      onClick={section !== "home" ? handleClickOutside : undefined}
+    >
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md shadow-md text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center p-4 gap-2">
@@ -71,6 +83,20 @@ export default function HomePage() {
         <AnimatePresence mode="wait">
           {renderSection()}
         </AnimatePresence>
+      </div>
+
+      {/* Floating Buttons */}
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/9725XXXXXXXX" target="_blank" rel="noopener noreferrer">
+          <div className="bg-green-500 rounded-full p-3 shadow-md hover:bg-green-600 transition">
+            <span role="img" aria-label="WhatsApp" className="text-white text-xl">💬</span>
+          </div>
+        </a>
+        <a href="tel:05XXXXXXXX">
+          <div className="bg-blue-500 rounded-full p-3 shadow-md hover:bg-blue-600 transition">
+            <span role="img" aria-label="Call" className="text-white text-xl">📞</span>
+          </div>
+        </a>
       </div>
     </div>
   );
