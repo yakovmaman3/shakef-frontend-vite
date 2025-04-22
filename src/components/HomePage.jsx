@@ -1,10 +1,10 @@
 // HomePage.jsx
 import React from "react";
-import HeroSection from "./components/HeroSection";
-import IntroSection from "./components/IntroSection";
-import HeavyWorkSection from "./components/HeavyWorkSection";
-import PremiumWorkSection from "./components/PremiumWorkSection";
-import VisionSection from "./components/VisionSection";
+import HeroSection from "./HeroSection";
+import IntroSection from "./IntroSection";
+import HeavyWorkSection from "./HeavyWorkSection";
+import PremiumWorkSection from "./PremiumWorkSection";
+import VisionSection from "./VisionSection";
 
 export default function HomePage() {
   return (
