@@ -30,10 +30,22 @@ export default function HomePage() {
   };
 
   const renderSection = () => {
-    const wrapperClasses = "bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto";
+    const wrapperClasses = "bg-black/30 backdrop-blur-sm p-6 rounded-md max-h-[80vh] overflow-y-auto text-white";
     switch (section) {
       case "gallery":
-        return <motion.div key="gallery" ref={wrapperRef} className={wrapperClasses} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><GallerySection /></motion.div>;
+        return (
+          <motion.div
+            key="gallery"
+            ref={wrapperRef}
+            className="w-full max-h-[80vh] overflow-y-auto bg-black/30 backdrop-blur-sm p-6 rounded-md text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <h2 className="text-3xl font-bold mb-6 text-center">גלריה</h2>
+            <GallerySection />
+          </motion.div>
+        );
       case "about":
         return <motion.div key="about" ref={wrapperRef} className={wrapperClasses} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><AboutSection /></motion.div>;
       case "contact":
