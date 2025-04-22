@@ -1,9 +1,10 @@
+// App.jsx
 import React from "react";
 import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen">
       <HomePage />
     </div>
   );
