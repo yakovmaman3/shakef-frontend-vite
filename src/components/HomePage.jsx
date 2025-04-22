@@ -37,12 +37,20 @@ export default function HomePage() {
           <motion.div
             key="gallery"
             ref={wrapperRef}
-            className="w-full max-h-[80vh] overflow-y-auto bg-black/30 backdrop-blur-sm p-0 rounded-md text-white"
+            className="w-full max-h-[80vh] overflow-y-auto bg-black/30 backdrop-blur-sm p-6 rounded-md text-white"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <GallerySection />
+            <h2 className="text-3xl font-bold mb-6 text-center">גלריה</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {[1,2,3,4,5,6].map(id => (
+                <div key={id} className="bg-white/10 rounded-lg p-4 text-center hover:bg-white/20 transition">
+                  <img src="#" alt={`gallery ${id}`} className="w-full h-40 object-cover mb-2" />
+                  <p>gallery {id}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
         );
       case "about":
