@@ -14,13 +14,20 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero.jpg)' }}>
-      {/* Navbar */}
-      <nav className="absolute top-0 left-0 right-0 z-10 flex justify-end p-4 space-x-6 space-x-reverse text-white text-xl">
-        <a href="#" className="hover:underline">דף הבית</a>
-        <a href="#about" className="hover:underline">אודותינו</a>
-        <a href="#gallery" className="hover:underline">גלריה</a>
-        <a href="#contact" className="hover:underline">צור קשר</a>
-      </nav>
+      {/* Transparent Floating Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-sm text-white px-4 py-3 flex items-center justify-between">
+        <div className="text-right leading-tight">
+          <h1 className="text-3xl font-bold">שַׁקֵּף</h1>
+          <p className="text-sm">עבודות מתכת</p>
+        </div>
+        <span className="text-sm">החוויה שלכם - הסיפוק שלנו</span>
+        <nav className="flex gap-6 text-sm font-medium">
+          <a href="#home" className="hover:text-blue-400 transition">דף הבית</a>
+          <a href="#about" className="hover:text-blue-400 transition">אודותינו</a>
+          <a href="#gallery" className="hover:text-blue-400 transition">גלריה</a>
+          <a href="#contact" className="hover:text-blue-400 transition">צור קשר</a>
+        </nav>
+      </header>
 
       {/* Animated Text */}
       <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-6xl font-bold">
