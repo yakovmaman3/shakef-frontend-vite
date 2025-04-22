@@ -37,12 +37,11 @@ export default function HomePage() {
           <motion.div
             key="gallery"
             ref={wrapperRef}
-            className="w-full max-h-[80vh] overflow-y-auto bg-black/30 backdrop-blur-sm p-6 rounded-md text-white"
+            className="w-full max-h-[80vh] overflow-y-auto bg-black/30 backdrop-blur-sm p-0 rounded-md text-white"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-center">גלריה</h2>
             <GallerySection />
           </motion.div>
         );
