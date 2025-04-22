@@ -13,14 +13,16 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/images/hero.jpg)' }}>
+    <div
+      className="relative min-h-screen bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: 'url(/images/hero.jpg)' }}
+    >
       {/* Transparent Floating Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-sm text-white px-4 py-3 flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-sm text-white px-6 py-4 flex items-center justify-between">
         <div className="text-right leading-tight">
           <h1 className="text-3xl font-bold">שַׁקֵּף</h1>
-          <p className="text-sm">עבודות מתכת</p>
+          <p className="text-sm text-gray-300 mt-1">החוויה שלכם - הסיפוק שלנו</p>
         </div>
-        <span className="text-sm">החוויה שלכם - הסיפוק שלנו</span>
         <nav className="flex gap-6 text-sm font-medium">
           <a href="#home" className="hover:text-blue-400 transition">דף הבית</a>
           <a href="#about" className="hover:text-blue-400 transition">אודותינו</a>
@@ -30,7 +32,7 @@ export default function HomePage() {
       </header>
 
       {/* Animated Text */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-6xl font-bold">
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-6xl font-bold pt-20">
         <div className="flex gap-6">
           {words.map((word, index) => (
             <motion.span
@@ -42,6 +44,9 @@ export default function HomePage() {
             </motion.span>
           ))}
         </div>
+        <p className="text-lg mt-10 text-gray-200 font-medium">
+          שערים ● גדרות ● מעקות ● עבודות מתכת ייחודיות לפרויקטים פרטיים ועסקיים
+        </p>
       </div>
     </div>
   );
