@@ -9,6 +9,7 @@ export default function HomePage() {
   const [visibleIndex, setVisibleIndex] = useState(0);
   const words = ["איכות", "מקצועיות", "אמינות"];
   const wrapperRef = useRef(null);
+  const lastClickedRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,7 +19,12 @@ export default function HomePage() {
   }, []);
 
   const handleClickOutside = (e) => {
-    if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+    if (
+      section !== "home" &&
+      wrapperRef.current &&
+      !wrapperRef.current.contains(e.target) &&
+      lastClickedRef.current !== e.target
+    ) {
       setSection("home");
     }
   };
@@ -60,7 +66,7 @@ export default function HomePage() {
     <div
       className="relative min-h-screen bg-fixed bg-cover bg-center"
       style={{ backgroundImage: 'url(/images/hero.jpg)' }}
-      onClick={section !== "home" ? handleClickOutside : undefined}
+      onClick={handleClickOutside}
     >
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md shadow-md text-white">
@@ -70,10 +76,10 @@ export default function HomePage() {
             <p className="text-xs md:text-sm text-gray-300">החוויה שלכם - הסיפוק שלנו</p>
           </div>
           <nav className="flex flex-wrap justify-center md:justify-end gap-4 text-sm md:text-base font-medium">
-            <button onClick={() => setSection("home")} className="hover:text-blue-400">דף הבית</button>
-            <button onClick={() => setSection("about")} className="hover:text-blue-400">אודותינו</button>
-            <button onClick={() => setSection("gallery")} className="hover:text-blue-400">גלריה</button>
-            <button onClick={() => setSection("contact")} className="hover:text-blue-400">צור קשר</button>
+            <button ref={lastClickedRef} onClick={(e) => { lastClickedRef.current = e.target; setSection("home"); }} className="hover:text-blue-400">דף הבית</button>
+            <button ref={lastClickedRef} onClick={(e) => { lastClickedRef.current = e.target; setSection("about"); }} className="hover:text-blue-400">אודותינו</button>
+            <button ref={lastClickedRef} onClick={(e) => { lastClickedRef.current = e.target; setSection("gallery"); }} className="hover:text-blue-400">גלריה</button>
+            <button ref={lastClickedRef} onClick={(e) => { lastClickedRef.current = e.target; setSection("contact"); }} className="hover:text-blue-400">צור קשר</button>
           </nav>
         </div>
       </header>
@@ -87,12 +93,12 @@ export default function HomePage() {
 
       {/* Floating Buttons */}
       <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
-        <a href="https://wa.me/9725XXXXXXXX" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/972552270388" target="_blank" rel="noopener noreferrer">
           <div className="bg-green-500 rounded-full p-3 shadow-md hover:bg-green-600 transition">
             <span role="img" aria-label="WhatsApp" className="text-white text-xl">💬</span>
           </div>
         </a>
-        <a href="tel:05XXXXXXXX">
+        <a href="tel:0552270388">
           <div className="bg-blue-500 rounded-full p-3 shadow-md hover:bg-blue-600 transition">
             <span role="img" aria-label="Call" className="text-white text-xl">📞</span>
           </div>
