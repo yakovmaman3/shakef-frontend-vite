@@ -12,7 +12,7 @@ function App() {
         setActiveSection={setActiveSection}
         setShowPhone={setShowPhone}
       />
-      {(activeSection === "contact" || showPhone) && (
+      {(activeSection || showPhone) && (
         <div
           className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-40 flex items-center justify-center"
           onClick={() => {
@@ -23,9 +23,24 @@ function App() {
           <div
             onClick={(e) => e.stopPropagation()}
             className={`bg-white/10 text-white p-8 rounded-xl max-w-xl w-full backdrop-blur-md shadow-xl transition-all scale-100 duration-500 ${
-              activeSection === "contact" || showPhone ? "mt-10" : ""
+              activeSection === "contact" || showPhone || activeSection === "about" ? "mt-10" : ""
             }`}
           >
+            {activeSection === "about" && (
+              <div>
+                <h2 className="text-2xl font-bold mb-4">אודות שקף</h2>
+                <p className="text-lg mb-4 leading-relaxed">
+                  שַׁקֵּף היא חברה לעבודות מתכת בהתאמה אישית, הפועלת מול לקוחות פרטיים ועסקיים.
+                  אנו מבצעים פרויקטים ברמות גימור גבוהות – ממתכת כבדה ועד ריהוט מעוצב.
+                </p>
+                <p className="text-md text-gray-400">
+                  🕒 שעות פעילות: ימים א׳–ה׳, 7:00–17:00<br />
+                  📍 <span className="underline decoration-dotted cursor-help" title="השרון, המרכז והשפלה">
+                    איזור פעילות
+                  </span>
+                </p>
+              </div>
+            )}
             {activeSection === "contact" && (
               <div>
                 <h2 className="text-2xl font-bold mb-4">צור קשר</h2>
