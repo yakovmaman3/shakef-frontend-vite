@@ -6,18 +6,18 @@ import IntroSection from "./IntroSection";
 import HeavyWorkSection from "./HeavyWorkSection";
 import PremiumWorkSection from "./PremiumWorkSection";
 import VisionSection from "./VisionSection";
+import AboutSection from "./AboutSection";
+import ContactSection from "./ContactSection";
+import ImageSlider from "./ImageSlider";
 
-export default function HomePage({ activeSection, setActiveSection }) {
+export default function HomePage() {
   return (
     <div className="relative text-white">
       <div className="fixed top-0 left-0 right-0 z-50">
-        <Navbar setActiveSection={setActiveSection} />
+        <Navbar />
       </div>
 
-      <div
-        className="min-h-screen bg-fixed bg-center bg-cover pt-28"
-        style={{ backgroundImage: "url('/images/hero.jpg')" }}
-      >
+      <div className="min-h-screen bg-fixed bg-center bg-cover pt-28" style={{ backgroundImage: "url('/images/hero.jpg')" }}>
         <HeroSection />
 
         <div className="backdrop-blur-md bg-black/30">
@@ -25,6 +25,8 @@ export default function HomePage({ activeSection, setActiveSection }) {
           <HeavyWorkSection />
           <PremiumWorkSection />
           <VisionSection />
+          <AboutSection />
+          <ContactSection />
         </div>
 
         {/* Floating Buttons */}
