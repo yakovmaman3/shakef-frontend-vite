@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <HomePage activeSection={activeSection} setActiveSection={setActiveSection} />
+      <HomePage activeSection={activeSection} setActiveSection={setActiveSection} setShowPhone={setShowPhone} />
       {activeSection && (
         <div
           className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-40 flex items-center justify-center"
