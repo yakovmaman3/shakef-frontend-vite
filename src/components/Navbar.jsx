@@ -9,16 +9,18 @@ function Navbar({ setActiveSection }) {
           <h1 className="text-4xl font-bold text-gray-900">שַׁקֵּף</h1>
           <p className="text-sm text-gray-500 -mt-1">עבודות מתכת</p>
         </div>
-        <div className="flex items-center space-x-6 space-x-reverse text-sm">
-          <div className="text-center w-full font-semibold text-gray-700 text-base md:text-lg">
-            הַחֲוָיָה שֶׁלָּכֶם - הַסִּפּוּק שֶׁלָּנוּ
-          </div>
-          <nav className="flex gap-6 text-gray-700 font-medium">
-            <button onClick={() => setActiveSection(null)} className="hover:text-blue-600 transition">דף הבית</button>
-            <button onClick={() => setActiveSection("about")} className="hover:text-blue-600 transition">אודות</button>
-            <button onClick={() => setActiveSection("contact")} className="hover:text-blue-600 transition">צור קשר</button>
-          </nav>
-        </div>
+        
+    <div className="flex flex-col items-center justify-center w-full text-sm">
+      <div className="text-center font-semibold text-gray-700 text-base md:text-lg">
+        הַחֲוָיָה שֶׁלָּכֶם - הַסִּפּוּק שֶׁלָּנוּ
+      </div>
+      <nav className="flex gap-6 text-gray-700 font-medium mt-2">
+        <button onClick={() => setActiveSection(null)} className="hover:text-blue-600 transition">דף הבית</button>
+        <button onClick={() => setActiveSection("about")} className="hover:text-blue-600 transition">אודות</button>
+        <button onClick={() => setActiveSection("contact")} className="hover:text-blue-600 transition">צור קשר</button>
+      </nav>
+    </div>
+    
       </div>
     </header>
   );
