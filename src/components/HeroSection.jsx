@@ -16,7 +16,7 @@ export default function HeroSection() {
   return (
     <div
       className="h-[85vh] flex flex-col justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/hero_op1.webp')" }}
+      style={{ backgroundImage: "url('/images/hero.webp')" }}
     >
       <AnimatePresence mode="wait">
         <motion.h1
