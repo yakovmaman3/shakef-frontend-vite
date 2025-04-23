@@ -1,6 +1,7 @@
+// Navbar.jsx
 import React from "react";
 
-function Navbar() {
+function Navbar({ setActiveSection }) {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -9,14 +10,13 @@ function Navbar() {
           <p className="text-sm text-gray-500 -mt-1">עבודות מתכת</p>
         </div>
         <div className="flex items-center space-x-6 space-x-reverse text-sm">
-          <span className="text-gray-600 hidden md:block">
+          <div className="text-center w-full font-semibold text-gray-700 text-base md:text-lg">
             הַחֲוָיָה שֶׁלָּכֶם - הַסִּפּוּק שֶׁלָּנוּ
-          </span>
+          </div>
           <nav className="flex gap-6 text-gray-700 font-medium">
-            <a href="#home" className="hover:text-blue-600 transition">דף הבית</a>
-            <a href="#about" className="hover:text-blue-600 transition">אודות</a>
-            <a href="#gallery" className="hover:text-blue-600 transition">גלריה</a>
-            <a href="#contact" className="hover:text-blue-600 transition">צור קשר</a>
+            <button onClick={() => setActiveSection(null)} className="hover:text-blue-600 transition">דף הבית</button>
+            <button onClick={() => setActiveSection("about")} className="hover:text-blue-600 transition">אודות</button>
+            <button onClick={() => setActiveSection("contact")} className="hover:text-blue-600 transition">צור קשר</button>
           </nav>
         </div>
       </div>

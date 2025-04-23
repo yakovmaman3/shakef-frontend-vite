@@ -13,9 +13,6 @@ export default function VisionSection() {
         “אני רוצה מישהו שלא מפחד להיכנס למבוי שנדמה כסתום ולהפוך אותו לגשר פאר.”
       </blockquote>
 
-      <div className="text-2xl md:text-3xl font-semibold text-white border-t border-gray-600 pt-6">
-        מה ששלך – שלך.
-      </div>
     </section>
   );
 }
