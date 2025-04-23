@@ -32,7 +32,7 @@ function App() {
                   ומה מייחד את השירות שלכם בעבודות מתכת.
                 </p>
                 <p className="text-md mt-4">✉️ example@shakef.com</p>
-                <p className="text-md">📞 ----</p>
+                <p className="text-md">📞 0552270388</p>
               </div>
             )}
             {activeSection === "contact" && (
@@ -52,7 +52,9 @@ function App() {
             {showPhone && (
               <div className="text-center space-y-4">
                 <h2 className="text-2xl font-bold">התקשרו אלינו</h2>
-                <p className="text-lg">055-2270388 📞</p>
+                <p className="text-lg">
+                  <a href="tel:0552270388" className="no-underline hover:text-blue-400 transition">055-2270388 📞</a>
+                </p>
               </div>
             )}
           </div>
