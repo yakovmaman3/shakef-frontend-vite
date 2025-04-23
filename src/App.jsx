@@ -6,7 +6,7 @@ function App() {
   const [showPhone, setShowPhone] = useState(false);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen select-none">
       <HomePage
         activeSection={activeSection}
         setActiveSection={setActiveSection}
@@ -32,7 +32,7 @@ function App() {
                   ומה מייחד את השירות שלכם בעבודות מתכת.
                 </p>
                 <p className="text-md mt-4">✉️ example@shakef.com</p>
-                <p className="text-md">📞 0552270388</p>
+                <p className="text-md">📞 ----</p>
               </div>
             )}
             {activeSection === "contact" && (
@@ -40,9 +40,9 @@ function App() {
                 <h2 className="text-2xl font-bold mb-4">צור קשר</h2>
                 <p className="mb-6">נשמח לשוחח איתכם! מלאו את הטופס ונחזור אליכם בהקדם.</p>
                 <form className="space-y-4">
-                  <input type="text" placeholder="שם מלא" className="w-full rounded px-4 py-2 text-black" />
-                  <input type="email" placeholder="אימייל" className="w-full rounded px-4 py-2 text-black" />
-                  <textarea placeholder="הודעה" rows="4" className="w-full rounded px-4 py-2 text-black" />
+                  <input type="text" placeholder="שם מלא" className="w-full rounded px-4 py-2 text-black select-text" />
+                  <input type="email" placeholder="אימייל" className="w-full rounded px-4 py-2 text-black select-text" />
+                  <textarea placeholder="הודעה" rows="4" className="w-full rounded px-4 py-2 text-black select-text" />
                   <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
                     שלח
                   </button>
