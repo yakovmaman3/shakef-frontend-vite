@@ -1,3 +1,4 @@
+
 import React from "react";
 
 function Navbar() {
@@ -13,10 +14,8 @@ function Navbar() {
             הַחֲוָיָה שֶׁלָּכֶם - הַסִּפּוּק שֶׁלָּנוּ
           </span>
           <nav className="flex gap-6 text-gray-700 font-medium">
-            <a href="#home" className="hover:text-blue-600 transition">דף הבית</a>
-            <a href="#about" className="hover:text-blue-600 transition">אודות</a>
-            <a href="#gallery" className="hover:text-blue-600 transition">גלריה</a>
-            <a href="#contact" className="hover:text-blue-600 transition">צור קשר</a>
+            <button onClick={() => window.dispatchEvent(new CustomEvent('open-about'))} className="hover:text-blue-600 transition">אודות</button>
+            <button onClick={() => window.dispatchEvent(new CustomEvent('open-contact'))} className="hover:text-blue-600 transition">צור קשר</button>
           </nav>
         </div>
       </div>

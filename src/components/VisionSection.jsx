@@ -1,4 +1,4 @@
-// VisionSection.jsx
+
 import React from "react";
 
 export default function VisionSection() {
@@ -12,10 +12,6 @@ export default function VisionSection() {
       <blockquote className="text-xl md:text-2xl text-blue-200 italic font-light mb-6">
         “אני רוצה מישהו שלא מפחד להיכנס למבוי שנדמה כסתום ולהפוך אותו לגשר פאר.”
       </blockquote>
-
-      <div className="text-2xl md:text-3xl font-semibold text-white border-t border-gray-600 pt-6">
-        מה ששלך – שלך.
-      </div>
     </section>
   );
 }
