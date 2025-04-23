@@ -1,25 +1,21 @@
-// Navbar.jsx
+// VisionSection.jsx
 import React from "react";
 
-function Navbar() {
+export default function VisionSection() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between text-white">
-        <div className="flex flex-col text-right leading-tight">
-          <h1 className="text-4xl font-bold">שַׁקֵּף</h1>
-          <div className="text-sm text-gray-300 flex gap-4 items-center">
-            <span>עבודות מתכת</span>
-            <span className="text-xs md:text-sm italic">החוויה שלכם - הסיפוק שלנו</span>
-          </div>
-        </div>
-        <nav className="flex gap-6 font-medium">
-          <a href="#home" className="hover:text-blue-400 transition">דף הבית</a>
-          <a href="#about" className="hover:text-blue-400 transition">אודות</a>
-          <a href="#contact" className="hover:text-blue-400 transition">צור קשר</a>
-        </nav>
+    <section className="px-6 py-16 max-w-4xl mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">החזון שלנו</h2>
+      <p className="text-gray-200 text-lg leading-relaxed mb-10">
+        החוזקה שלנו טמונה בחיבור האנושי. כל לקוח מרגיש שהוא חלק מהמשפחה – ואנחנו מתייחסים אליו בהתאם. אנו מאמינים באיכות בלתי מתפשרת, שירות מכבד, ובביצוע מדויק של כל פרויקט, קטן כגדול.
+      </p>
+
+      <blockquote className="text-xl md:text-2xl text-blue-200 italic font-light mb-6">
+        “אני רוצה מישהו שלא מפחד להיכנס למבוי שנדמה כסתום ולהפוך אותו לגשר פאר.”
+      </blockquote>
+
+      <div className="text-2xl md:text-3xl font-semibold text-white border-t border-gray-600 pt-6">
+        מה ששלך – שלך.
       </div>
-    </header>
+    </section>
   );
 }
-
-export default Navbar;
