@@ -28,6 +28,7 @@ function App() {
           >
             {activeSection === "about" && (
               <div>
+        <h2 className="text-2xl font-bold mb-4">אודות</h2>
           <p className="text-md text-gray-400">
           🕒 שעות פעילות: ימים א׳–ה׳, 7:00–17:00<br />
           📍 איזור פעילות: השרון, המרכז והשפלה
