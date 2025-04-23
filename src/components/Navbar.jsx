@@ -1,7 +1,7 @@
 // Navbar.jsx
 import React from "react";
 
-function Navbar({ setActiveSection }) {
+function Navbar({ setActiveSection, setShowPhone }) {
   return (
     
 <header className="bg-white/10 backdrop-blur-sm text-white shadow-md sticky top-0 z-50 border-b border-white/20">
