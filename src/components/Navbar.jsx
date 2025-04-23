@@ -22,7 +22,6 @@ function Navbar({ setActiveSection, setShowPhone }) {
       הַחֲוָיָה שֶׁלָּכֶם - הַסִּפּוּק שֶׁלָּנוּ
     </div>
     <nav className="flex gap-6 font-medium mt-3 md:mt-0">
-      <button onClick={() => setActiveSection(null)} className="hover:text-blue-300 transition">דף הבית</button>
       <button onClick={() => setActiveSection("about")} className="hover:text-blue-300 transition">אודות</button>
       <button onClick={() => setActiveSection("contact")} className="hover:text-blue-300 transition">צור קשר</button>
     </nav>
