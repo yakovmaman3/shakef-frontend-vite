@@ -10,11 +10,11 @@ export default function IntroSection() {
       </p>
       <div className="flex justify-center gap-6 flex-wrap">
         <a
-          href="tel:0552270388"
+          href="#" onClick={(e) => { e.preventDefault(); setShowPhone(true); }}
           className="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-3 rounded-full font-semibold shadow"
         >
           📞 התקשר עכשיו
-        </a>
+        </button>
         <a
           href="https://wa.me/972552270388"
           target="_blank"
@@ -22,7 +22,7 @@ export default function IntroSection() {
           className="bg-green-600 hover:bg-green-700 transition text-white px-6 py-3 rounded-full font-semibold shadow"
         >
           💬 שלח וואטסאפ
-        </a>
+        </button>
       </div>
     </section>
   );
