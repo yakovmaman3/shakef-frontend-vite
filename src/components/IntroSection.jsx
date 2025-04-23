@@ -1,7 +1,6 @@
-// IntroSection.jsx
 import React from "react";
 
-export default function IntroSection() {
+export default function IntroSection({ setShowPhone }) {
   return (
     <section className="text-center px-6 py-16 max-w-4xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">שַׁקֵּף – מסגרות בהתאמה אישית</h2>
@@ -9,8 +8,8 @@ export default function IntroSection() {
         אנו מתמחים בעבודות מתכת קלות וכבדות — החל ממעקות, שערים, ריהוט וברזל מעוצב ועד לפרויקטים כבדים כגון מרפסות, קונסטרוקציות, שלדי מבנים ומערכות מיוחדות.
       </p>
       <div className="flex justify-center gap-6 flex-wrap">
-        <a
-          href="#" onClick={(e) => { e.preventDefault(); setShowPhone(true); }}
+        <button
+          onClick={() => setShowPhone(true)}
           className="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-3 rounded-full font-semibold shadow"
         >
           📞 התקשר עכשיו
@@ -22,7 +21,7 @@ export default function IntroSection() {
           className="bg-green-600 hover:bg-green-700 transition text-white px-6 py-3 rounded-full font-semibold shadow"
         >
           💬 שלח וואטסאפ
-        </button>
+        </a>
       </div>
     </section>
   );
