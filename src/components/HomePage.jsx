@@ -21,7 +21,7 @@ export default function HomePage({ activeSection, setActiveSection, setShowPhone
         <HeroSection />
 
         <div className="backdrop-blur-md bg-black/30">
-          <IntroSection />
+          <IntroSection setShowPhone={setShowPhone} />
           <HeavyWorkSection />
           <PremiumWorkSection />
           <VisionSection />

@@ -32,7 +32,7 @@ function App() {
                   ומה מייחד את השירות שלכם בעבודות מתכת.
                 </p>
                 <p className="text-md mt-4">✉️ example@shakef.com</p>
-                <p className="text-md">📞 0552270388</p>
+                <p className="text-md">📞 ----</p>
               </div>
             )}
             {activeSection === "contact" && (
