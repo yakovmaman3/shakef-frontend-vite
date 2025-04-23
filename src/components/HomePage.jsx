@@ -7,7 +7,7 @@ import HeavyWorkSection from "./HeavyWorkSection";
 import PremiumWorkSection from "./PremiumWorkSection";
 import VisionSection from "./VisionSection";
 
-export default function HomePage({ activeSection, setActiveSection, setShowPhone }) {
+export default function HomePage({ activeSection, setActiveSection }) {
   return (
     <div className="relative text-white">
       <div className="fixed top-0 left-0 right-0 z-50">
