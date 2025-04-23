@@ -14,10 +14,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div
-      className="h-[85vh] flex flex-col justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/hero.webp')" }}
-    >
+    <div className="h-[85vh] flex flex-col justify-center items-center text-center px-4">
       <AnimatePresence mode="wait">
         <motion.h1
           key={words[index]}
