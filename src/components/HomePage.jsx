@@ -16,7 +16,7 @@ export default function HomePage({ activeSection, setActiveSection, setShowPhone
 
       <div
         className="min-h-screen bg-fixed bg-center bg-cover pt-28"
-        style={{ backgroundImage: "url('/images/hero.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero.webp')" }}
       >
         <HeroSection />
 
