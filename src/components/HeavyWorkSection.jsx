@@ -1,4 +1,3 @@
-// HeavyWorkSection.jsx
 import React from "react";
 import ImageSlider from "./ImageSlider";
 
@@ -8,6 +7,7 @@ export default function HeavyWorkSection() {
     "/images/heavy/2.jpg",
     "/images/heavy/3.jpg",
     "/images/heavy/4.jpg",
+    "/images/heavy/5.jpg"
   ];
 
   return (

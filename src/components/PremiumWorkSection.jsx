@@ -1,4 +1,3 @@
-// PremiumWorkSection.jsx
 import React from "react";
 import ImageSlider from "./ImageSlider";
 
@@ -8,6 +7,7 @@ export default function PremiumWorkSection() {
     "/images/premium/2.jpg",
     "/images/premium/3.jpg",
     "/images/premium/4.jpg",
+    "/images/premium/5.jpg"
   ];
 
   return (
