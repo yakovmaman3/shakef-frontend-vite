@@ -12,7 +12,7 @@ function App() {
         setActiveSection={setActiveSection}
         setShowPhone={setShowPhone}
       />
-      {(activeSection || showPhone) && (
+      {(activeSection === "contact" || showPhone) && (
         <div
           className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-40 flex items-center justify-center"
           onClick={() => {
@@ -26,17 +26,6 @@ function App() {
               activeSection === "contact" || showPhone ? "mt-10" : ""
             }`}
           >
-            {activeSection === "about" && (
-              <div>
-                <h2 className="text-2xl font-bold mb-4">אודותינו</h2>
-                <p className="text-lg mb-4 leading-relaxed">
-                  טקסט לדוגמה על החברה. כאן תוכלו לכתוב על הדרך שלכם, הערכים שמנחים אתכם,
-                  ומה מייחד את השירות שלכם בעבודות מתכת.
-                </p>
-                <p className="text-md mt-4">✉️ example@shakef.com</p>
-                <p className="text-md">📞 055-2270388</p>
-              </div>
-            )}
             {activeSection === "contact" && (
               <div>
                 <h2 className="text-2xl font-bold mb-4">צור קשר</h2>
