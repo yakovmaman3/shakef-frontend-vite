@@ -17,9 +17,10 @@ export default function ImageSlider({ images, interval = 3000 }) {
           key={index}
           src={img}
           alt={`תמונה ${index + 1}`}
-          className={`transition-opacity duration-700 ease-in-out w-full max-h-[500px] object-contain mx-auto ${
+          className={`transition-opacity duration-[1000ms] ease-[cubic-bezier(0.4,0,0.2,1)] w-full max-h-[500px] object-contain mx-auto ${
             index === current ? "opacity-100" : "opacity-0 absolute"
           }`}
+
         />
       ))}
     </div>
