@@ -10,7 +10,7 @@ export default function VisionSection() {
       </p>
 
       <blockquote className="text-xl md:text-2xl text-blue-200 italic font-light mb-6">
-        “כאדם הנכנס למבוי סתום והופכו אותו לגשר פאר"
+        “כאדם הנכנס למבוי סתום והופכו לגשר פאר"
       </blockquote>
 
     </section>
