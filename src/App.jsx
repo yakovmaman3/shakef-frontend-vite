@@ -28,18 +28,12 @@ function App() {
           >
             {activeSection === "about" && (
               <div>
-                <h2 className="text-2xl font-bold mb-4">אודות שקף</h2>
-                <p className="text-lg mb-4 leading-relaxed">
-                  שַׁקֵּף היא חברה לעבודות מתכת בהתאמה אישית, הפועלת מול לקוחות פרטיים ועסקיים.
-                  אנו מבצעים פרויקטים ברמות גימור גבוהות – ממתכת כבדה ועד ריהוט מעוצב וברזל אדריכלי.
-                </p>
-                <p className="text-md text-gray-400">
-                  🕒 שעות פעילות: ימים א׳–ה׳, 7:00–17:00<br />
-                  📍 <span className="underline decoration-dotted cursor-help" title="השרון, המרכז והשפלה">
-                    איזור פעילות
-                  </span>
-                </p>
-              </div>
+          <p className="text-md text-gray-400">
+          🕒 שעות פעילות: ימים א׳–ה׳, 7:00–17:00<br />
+          📍 איזור פעילות: השרון, המרכז והשפלה
+          </p>
+        </div>
+
             )}
             {activeSection === "contact" && (
               <div>
