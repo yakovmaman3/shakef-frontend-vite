@@ -8,11 +8,12 @@ function Navbar({ setActiveSection, setShowPhone }) {
   <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col items-center md:flex-row md:justify-between text-center md:text-right">
     <div className="text-right leading-tight">
       <h1
-        className="text-4xl font-bold cursor-pointer"
+        className="text-4xl font-bold cursor-pointer select-none"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         שַׁקֵּף
       </h1>
+
 
       <p className="text-sm -mt-1 tracking-tight">עבודות מתכת</p>
     </div>
