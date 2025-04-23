@@ -1,4 +1,3 @@
-// HeroSection.jsx
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,7 +14,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="h-[85vh] flex flex-col justify-center items-center text-center px-4">
+    <div
+      className="h-[85vh] flex flex-col justify-center items-center text-center px-4 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/images/hero_op1.webp')" }}
+    >
       <AnimatePresence mode="wait">
         <motion.h1
           key={words[index]}
