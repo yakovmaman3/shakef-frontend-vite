@@ -2,16 +2,18 @@ import React from "react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="text-gray-200">
-      <div className="max-w-4xl mx-auto text-center py-8 px-4">
-        <h2 className="text-3xl font-bold mb-4">אודותינו</h2>
-        <p className="text-lg mb-4 leading-relaxed">
-          טקסט לדוגמה על החברה. כאן תוכלו לכתוב על הדרך שלכם, הערכים שמנחים אתכם,
-          ומה מייחד את השירות שלכם בעבודות מתכת.
-        </p>
-        <p className="text-md mt-4">✉️ example@shakef.com</p>
-        <p className="text-md">📞 ----</p>
-      </div>
+    <section className="text-center px-6 py-16 max-w-4xl mx-auto leading-relaxed">
+      <h2 className="text-3xl font-bold mb-6 text-white">אודות שקף</h2>
+
+      <p className="text-md text-gray-400">
+        🕒 שעות פעילות: ימים א׳–ה׳, 7:00–17:00<br />
+        📍 <span
+          className="underline decoration-dotted cursor-help"
+          title="השרון, המרכז והשפלה"
+        >
+          איזור פעילות
+        </span>
+      </p>
     </section>
   );
 }
