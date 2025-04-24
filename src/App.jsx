@@ -48,13 +48,8 @@ function App() {
                     const phone = e.target.phone.value;
                     const message = e.target.message.value;
 
-                    if (!name || !message) {
-                      alert("נא למלא שם ופנייה.");
-                      return;
-                    }
-
-                    if (!email && !phone) {
-                      alert("אנא מלא אימייל או מספר טלפון לפחות.");
+                    if (!name || !phone || !message) {
+                      alert("נא למלא שם, מספר טלפון ופנייה.");
                       return;
                     }
 
@@ -81,8 +76,8 @@ function App() {
                 >
                   <input type="text" name="name" placeholder="שם מלא" className="w-full rounded px-4 py-2 text-black" required />
                   <input type="email" name="email" placeholder="אימייל (אופציונלי)" className="w-full rounded px-4 py-2 text-black" />
-                  <input type="tel" name="phone" placeholder="מספר טלפון (אופציונלי)" className="w-full rounded px-4 py-2 text-black" />
-                  <textarea name="message" placeholder="הודעה" rows="4" className="w-full rounded px-4 py-2 text-black" required />
+                  <input type="tel" name="phone" placeholder="מספר טלפון" className="w-full rounded px-4 py-2 text-black" required />
+                  <textarea name="message" placeholder="פנייה" rows="4" className="w-full rounded px-4 py-2 text-black" required />
                   <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
                     שלח
                   </button>
