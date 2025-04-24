@@ -10,7 +10,7 @@
 
 .scrolled-mobile .navbar {
   padding-top: 0.15rem;
-  padding-bottom: 0.15rem;
+  padding-bottom: 0px;
 }
 
 .scrolled-mobile .navbar-logo {
@@ -18,7 +18,7 @@
 }
 
 .scrolled-mobile .navbar-links {
-  transform: translateX(-80px) translateY(-10px);
+  transform: translateX(-80px) translateY(-40px);
 }
 
 .scrolled-mobile .navbar-motto {
