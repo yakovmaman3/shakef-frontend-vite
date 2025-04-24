@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 export default function Navbar({ setActiveSection }) {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileScrolled, setIsMobileScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth <= 768) {
-        setIsScrolled(window.scrollY > 10);
+        setIsMobileScrolled(window.scrollY > 10);
       } else {
-        setIsScrolled(false);
+        setIsMobileScrolled(false);
       }
     };
 
@@ -18,28 +18,24 @@ export default function Navbar({ setActiveSection }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div
-        className={`flex flex-col items-center justify-center py-2 transition-all duration-500 md:flex-row md:justify-between md:px-8 ${
-          isScrolled ? "mobile-navbar-scroll" : ""
-        }`}
-      >
+      <div className="flex flex-col items-center justify-center py-2 transition-all duration-500 md:flex-row md:justify-between md:px-8">
         <h1
           className={`text-2xl font-bold tracking-tight text-white transition-transform duration-500 ${
-            isScrolled ? "md:translate-x-0 translate-x-[-80px]" : ""
+            isMobileScrolled ? "translate-x-[-80px] md:translate-x-0" : "translate-x-0"
           }`}
         >
           שַׁקֵּף
         </h1>
         <span
           className={`text-sm text-white mt-1 md:mt-0 transition-opacity duration-500 ${
-            isScrolled ? "md:opacity-100 opacity-0" : "opacity-100"
+            isMobileScrolled ? "opacity-0 md:opacity-100" : "opacity-100"
           }`}
         >
           החוויה שלכם – הסיפוק שלנו
         </span>
         <nav
           className={`flex space-x-4 mt-2 md:mt-0 transition-transform duration-500 ${
-            isScrolled ? "md:translate-x-0 translate-x-[80px]" : ""
+            isMobileScrolled ? "translate-x-[80px] md:translate-x-0" : "translate-x-0"
           }`}
         >
           <button
