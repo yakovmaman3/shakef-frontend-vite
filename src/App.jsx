@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 function App() {
   const [activeSection, setActiveSection] = useState(null);
   const [showPhone, setShowPhone] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   return (
     <div className="min-h-screen">
@@ -13,12 +14,13 @@ function App() {
         setShowPhone={setShowPhone}
       />
 
-      {(activeSection || showPhone) && (
+      {(activeSection || showPhone || showConfirmation) && (
         <div
           className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-40 flex items-center justify-center"
           onClick={() => {
             setActiveSection(null);
             setShowPhone(false);
+            setShowConfirmation(false);
           }}
         >
           <div
@@ -63,8 +65,12 @@ function App() {
                       });
 
                       if (res.ok) {
-                        alert("ההודעה נשלחה בהצלחה!");
                         e.target.reset();
+                        setActiveSection(null);
+                        setShowConfirmation(true);
+                        setTimeout(() => {
+                          setShowConfirmation(false);
+                        }, 2000);
                       } else {
                         alert("אירעה שגיאה בשליחה.");
                       }
@@ -74,10 +80,10 @@ function App() {
                     }
                   }}
                 >
-                  <input type="text" name="name" placeholder="שם מלא" className="w-full rounded px-4 py-2 text-black" required />
-                  <input type="email" name="email" placeholder="אימייל (אופציונלי)" className="w-full rounded px-4 py-2 text-black" />
-                  <input type="tel" name="phone" placeholder="מספר טלפון" className="w-full rounded px-4 py-2 text-black" required />
-                  <textarea name="message" placeholder="פנייה" rows="4" className="w-full rounded px-4 py-2 text-black" required />
+                  <input type="text" name="name" placeholder="שם מלא" className="w-full rounded px-4 py-2 text-black text-right" required />
+                  <input type="email" name="email" placeholder="אימייל (אופציונלי)" className="w-full rounded px-4 py-2 text-black text-right" />
+                  <input type="tel" name="phone" placeholder="מספר טלפון" className="w-full rounded px-4 py-2 text-black text-right" required />
+                  <textarea name="message" placeholder="פנייה" rows="4" className="w-full rounded px-4 py-2 text-black text-right" required />
                   <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
                     שלח
                   </button>
@@ -92,6 +98,12 @@ function App() {
                     📞 055-2270388
                   </a>
                 </p>
+              </div>
+            )}
+            {showConfirmation && (
+              <div className="text-center space-y-4">
+                <h2 className="text-2xl font-bold">הפנייה נשלחה!</h2>
+                <p className="text-lg">נחזור אליכם בהקדם – תודה!</p>
               </div>
             )}
           </div>
