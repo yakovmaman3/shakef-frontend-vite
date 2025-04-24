@@ -8,20 +8,26 @@
   }
 }
 
+.scrolled-mobile .navbar {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .scrolled-mobile .navbar-logo {
-  transform: translateX(-40px);
+  transform: translateX(60px);
 }
 
 .scrolled-mobile .navbar-links {
-  transform: translateX(40px);
+  transform: translateX(-60px);
 }
 
 .scrolled-mobile .navbar-motto {
-  opacity: 0;
+  opacity: 1;
 }
 
+.navbar,
 .navbar-logo,
 .navbar-links,
 .navbar-motto {
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
 }
