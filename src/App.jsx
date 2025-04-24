@@ -70,7 +70,7 @@ function App() {
                         setShowConfirmation(true);
                         setTimeout(() => {
                           setShowConfirmation(false);
-                        }, 2000);
+                        }, 3456);
                       } else {
                         alert("אירעה שגיאה בשליחה.");
                       }
