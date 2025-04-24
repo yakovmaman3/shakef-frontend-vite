@@ -9,10 +9,6 @@ export default function VisionSection() {
         החוזקה שלנו טמונה בחיבור האנושי. כל לקוח מרגיש שהוא חלק מהמשפחה – ואנחנו מתייחסים אליו בהתאם. אנו מאמינים באיכות בלתי מתפשרת, שירות מכבד, ובביצוע מדויק של כל פרויקט, קטן כגדול.
       </p>
 
-      <blockquote className="text-xl md:text-2xl text-blue-200 italic font-light mb-6">
-        “כאדם הנכנס למבוי סתום והופכו לגשר פאר"
-      </blockquote>
-
     </section>
   );
 }
