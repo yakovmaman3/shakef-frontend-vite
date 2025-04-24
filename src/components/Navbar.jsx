@@ -3,7 +3,7 @@ import React from "react";
 function Navbar({ setActiveSection, setShowPhone }) {
   return (
     <header className="bg-white/10 backdrop-blur-sm text-white shadow-md sticky top-0 z-50 border-b border-white/20">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col items-center md:flex-row md:justify-between text-center md:text-right">
+      <div className="navbar transition-all duration-500 max-w-7xl mx-auto px-4 py-4 flex flex-col items-center md:flex-row md:justify-between text-center md:text-right">
         <div className="text-right leading-tight">
           <h1
             className="text-4xl font-bold cursor-pointer select-none"

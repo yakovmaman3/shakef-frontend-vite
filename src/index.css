@@ -7,3 +7,12 @@
     background-attachment: scroll !important;
   }
 }
+
+.scrolled-mobile .navbar {
+  transform: translateY(-15px);
+  opacity: 0.95;
+}
+
+.navbar {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}

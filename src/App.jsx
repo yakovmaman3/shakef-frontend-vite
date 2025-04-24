@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HomePage from "./components/HomePage";
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
   const [showPhone, setShowPhone] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
+
+  useEffect(() => {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        document.body.classList.add("scrolled-mobile");
+      } else {
+        document.body.classList.remove("scrolled-mobile");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen">
