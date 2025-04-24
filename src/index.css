@@ -14,11 +14,11 @@
 }
 
 .scrolled-mobile .navbar-logo {
-  transform: translateX(80px) translateY(6px);
+  transform: translateX(80px);
 }
 
 .scrolled-mobile .navbar-links {
-  transform: translateX(-80px) translateY(-6px);
+  transform: translateX(-80px) translateY(-10px);
 }
 
 .scrolled-mobile .navbar-motto {
