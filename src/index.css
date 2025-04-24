@@ -9,16 +9,25 @@
 }
 
 .scrolled-mobile .navbar {
-  padding-top: 0.15rem;
-  padding-bottom: -30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .scrolled-mobile .navbar-logo {
-  transform: translateX(100px);
+  transform: translateX(80px);
 }
 
 .scrolled-mobile .navbar-links {
-  transform: translateX(-80px) translateY(-80px);
+  transform: translateX(-80px) translateY(-100px);
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.scrolled-mobile .navbar-logo p,
+.scrolled-mobile .navbar-logo h1 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .scrolled-mobile .navbar-motto {
