@@ -8,11 +8,20 @@
   }
 }
 
-.scrolled-mobile .navbar {
-  transform: translateY(-15px);
-  opacity: 0.95;
+.scrolled-mobile .navbar-logo {
+  transform: translateX(-40px);
 }
 
-.navbar {
+.scrolled-mobile .navbar-links {
+  transform: translateX(40px);
+}
+
+.scrolled-mobile .navbar-motto {
+  opacity: 0;
+}
+
+.navbar-logo,
+.navbar-links,
+.navbar-motto {
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
