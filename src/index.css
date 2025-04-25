@@ -12,7 +12,7 @@
 .scrolled-mobile .navbar {
   padding-top: 0;
   padding-bottom: 0;
-  height: 44px; /* גובה ממש קטן, רק לפס דק במובייל */
+  height: 55px; /* גובה ממש קטן, רק לפס דק במובייל */
   overflow: hidden;
 }
 
@@ -23,7 +23,7 @@
 
 .scrolled-mobile .navbar-links {
   transform: translateX(-150px);
-  transform: translateX(-80px) translateY(-88px); /* לא ניגע בגובה עדיין */
+  transform: translateX(-70px) translateY(-88px); /* לא ניגע בגובה עדיין */
 }
 
 .scrolled-mobile .navbar-motto {
