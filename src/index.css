@@ -16,7 +16,8 @@
 }
 
 .scrolled-mobile .navbar-logo {
-  transform: translateX(100px); /* בינתיים נשאיר רק צדדים */
+  transform: translateX(100px);
+  transform: translateY(-88px); /* בינתיים נשאיר רק צדדים */
 }
 
 .scrolled-mobile .navbar-links {
