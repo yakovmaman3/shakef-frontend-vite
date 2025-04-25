@@ -12,7 +12,7 @@
 .scrolled-mobile .navbar {
   padding-top: 0;
   padding-bottom: 0;
-  height: 35px; /* גובה ממש קטן, רק לפס דק במובייל */
+  height: 44px; /* גובה ממש קטן, רק לפס דק במובייל */
   overflow: hidden;
 }
 
