@@ -12,7 +12,7 @@
 .scrolled-mobile .navbar {
   padding-top: 0px;
   padding-bottom: 0px;
-  transform: translateY(-130px); /* בום! */
+  transform: translateY(-1px); /* בום! */
 }
 
 .scrolled-mobile .navbar-logo {
