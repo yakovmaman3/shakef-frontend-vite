@@ -11,6 +11,7 @@
 .scrolled-mobile .navbar {
   padding-top: 0.15rem;
   padding-bottom: 0px;
+  transform: translateY(-22px); /* הרמה */
 }
 
 .scrolled-mobile .navbar-logo {
