@@ -12,7 +12,7 @@ function App() {
     if (!isMobile) return;
 
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 10 || activeSection === "contact") {
         document.body.classList.add("scrolled-mobile");
       } else {
         document.body.classList.remove("scrolled-mobile");
@@ -20,8 +20,10 @@ function App() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // run once on mount
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [activeSection]);
 
   return (
     <div className="min-h-screen">
