@@ -8,10 +8,11 @@
   }
 }
 
+/* גרסה מעודכנת – פס עליון מתרומם בצורה נעימה במובייל */
 .scrolled-mobile .navbar {
-  padding-top: 0.15rem;
+  padding-top: 0px;
   padding-bottom: 0px;
-  transform: translateY(-22px); /* הרמה */
+  transform: translateY(-12px);
 }
 
 .scrolled-mobile .navbar-logo {
@@ -19,7 +20,7 @@
 }
 
 .scrolled-mobile .navbar-links {
-  transform: translateX(-80px) translateY(-88px);
+  transform: translateX(-80px) translateY(-40px);
 }
 
 .scrolled-mobile .navbar-motto {
