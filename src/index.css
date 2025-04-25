@@ -10,9 +10,10 @@
 
 /* פס עליון קופץ למעלה ממש */
 .scrolled-mobile .navbar {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  transform: translateY(-1px); /* בום! */
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 28px; /* גובה ממש קטן, רק לפס דק במובייל */
+  overflow: hidden;
 }
 
 .scrolled-mobile .navbar-logo {
