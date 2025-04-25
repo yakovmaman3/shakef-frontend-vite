@@ -22,7 +22,7 @@
 
 .scrolled-mobile .navbar-links {
   transform: translateX(-150px);
-  transform: translateY(-88px); /* לא ניגע בגובה עדיין */
+  transform: translateX(-80px) translateY(-88px); /* לא ניגע בגובה עדיין */
 }
 
 .scrolled-mobile .navbar-motto {
