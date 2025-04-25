@@ -8,19 +8,19 @@
   }
 }
 
-/* גרסה עם הרמה משמעותית של כל הפס העליון במובייל */
+/* פס עליון קופץ למעלה ממש */
 .scrolled-mobile .navbar {
   padding-top: 0px;
   padding-bottom: 0px;
-  transform: translateY(-52px); /* רמה גבוהה יותר */
+  transform: translateY(-95px); /* בום! */
 }
 
 .scrolled-mobile .navbar-logo {
-  transform: translateX(100px); /* נשאיר זמנית */
+  transform: translateX(100px); /* בינתיים נשאיר רק צדדים */
 }
 
 .scrolled-mobile .navbar-links {
-  transform: translateX(-80px); /* בלי Y זמנית */
+  transform: translateX(-80px); /* לא ניגע בגובה עדיין */
 }
 
 .scrolled-mobile .navbar-motto {
