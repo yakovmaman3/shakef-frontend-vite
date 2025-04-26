@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
@@ -17,12 +16,8 @@ export default function HomePage({ activeSection, setActiveSection, setShowPhone
       <div
         className="min-h-screen bg-fixed bg-center bg-cover pt-28 ios-fix"
         style={{
-          backgroundImage: "url('/images/hero.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundColor: "#4f4f4f"
         }}
-
-
       >
         <HeroSection />
 
