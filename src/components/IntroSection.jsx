@@ -20,7 +20,7 @@ export default function IntroSection({ setShowPhone }) {
           rel="noopener noreferrer"
           className="bg-green-600 hover:bg-green-700 transition text-white px-6 py-3 rounded-full font-semibold shadow"
         >
-          💬 שלח וואטסאפ
+          💬 שלחו וואטסאפ
         </a>
       </div>
     </section>
