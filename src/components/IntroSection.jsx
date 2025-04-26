@@ -6,7 +6,8 @@ export default function IntroSection({ setShowPhone }) {
       <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">שַׁקֵּף – מסגרות בהתאמה אישית</h2>
       <p className="text-lg text-gray-200 leading-relaxed mb-8">
         אנו מתמחים בעבודות מתכת קלות וכבדות — החל ממעקות, שערים, ריהוט וברזל מעוצב ועד לפרויקטים כבדים כגון מרפסות, קונסטרוקציות, שלדי מבנים ומערכות מיוחדות.
-    שירות וביצוע עם ליווי הנדסי ואדריכלי, כולל ייצור וקריאת תכניות מפורטות.
+        <br />
+        שירות וביצוע עם ליווי הנדסי ואדריכלי, כולל ייצור וקריאת תכניות מפורטות.
       </p>
       <div className="flex justify-center gap-6 flex-wrap">
         <button
@@ -27,3 +28,4 @@ export default function IntroSection({ setShowPhone }) {
     </section>
   );
 }
+
