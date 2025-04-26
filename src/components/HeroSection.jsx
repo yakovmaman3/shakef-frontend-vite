@@ -15,7 +15,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="h-[85vh] flex flex-col justify-center items-center text-center px-4">
+    <div className="min-h-screen flex flex-col justify-center items-center text-center px-4">
       <AnimatePresence mode="wait">
         <motion.h1
           key={words[index]}
