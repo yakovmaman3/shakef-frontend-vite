@@ -2,28 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  user-select: none;
+}
+
 @supports (-webkit-touch-callout: none) {
   .ios-fix {
     background-attachment: scroll !important;
   }
 }
 
-/* פס עליון קופץ למעלה ממש */
 .scrolled-mobile .navbar {
   padding-top: 0;
   padding-bottom: 0;
-  height: 55px; /* גובה ממש קטן, רק לפס דק במובייל */
+  height: 28px;
   overflow: hidden;
 }
 
 .scrolled-mobile .navbar-logo {
-  transform: translateX(100px);
-   /* בינתיים נשאיר רק צדדים */
+  transform: none;
 }
 
 .scrolled-mobile .navbar-links {
-  transform: translateX(-150px);
-  transform: translateX(-55px) translateY(-84px); /* לא ניגע בגובה עדיין */
+  transform: none;
 }
 
 .scrolled-mobile .navbar-motto {
@@ -35,6 +36,6 @@
 .navbar-logo,
 .navbar-links,
 .navbar-motto {
-  transition: transform 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
-  will-change: transform, opacity, padding;
+  transition: all 0.4s ease;
+  will-change: transform, opacity, padding, height;
 }
