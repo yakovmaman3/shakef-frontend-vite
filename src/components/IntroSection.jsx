@@ -7,7 +7,7 @@ export default function IntroSection({ setShowPhone }) {
       <p className="text-lg text-gray-200 leading-relaxed mb-8">
         אנו מתמחים בעבודות מתכת קלות וכבדות — החל ממעקות, שערים, ריהוט וברזל מעוצב ועד לפרויקטים כבדים כגון מרפסות, קונסטרוקציות, שלדי מבנים ומערכות מיוחדות.
         <br />
-        שירות וביצוע עם ליווי הנדסי ואדריכלי, כולל ייצור וקריאת תכניות מפורטות.
+        שירות וביצוע בליווי הנדסי ואדריכלי, כולל ייצור תכניות לביצוע.
       </p>
       <div className="flex justify-center gap-6 flex-wrap">
         <button
