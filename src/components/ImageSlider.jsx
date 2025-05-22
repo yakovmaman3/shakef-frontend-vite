@@ -15,8 +15,8 @@ export default function ImageSlider({ images, interval = 3000 }) {
       {images.map((img, index) => (
         <img
           key={index}
-          src={img}
-          alt={`תמונה ${index + 1}`}
+          src={typeof img === "string" ? img : img.src}
+          alt={typeof img === "string" ? `תמונה ${index + 1}` : img.alt}
           className={`transition-opacity duration-[1000ms] ease-[cubic-bezier(0.4,0,0.2,1)] w-auto max-h-full object-contain mx-auto ${
             index === current ? "opacity-100" : "opacity-0 absolute"
           }`}
