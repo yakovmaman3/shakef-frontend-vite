@@ -3,11 +3,11 @@ import ImageSlider from "./ImageSlider";
 
 export default function HeavyWorkSection() {
   const images = [
-    { src: "/images/heavy/1.jpg", alt: "קונסטרוקציית מתכת, פלדה וברזל למבנה תעשייתי" },
-    { src: "/images/heavy/2.jpg", alt: "גלריית מתכת, פלדה וברזל לחיזוק מבנה קיים" },
-    { src: "/images/heavy/3.jpg", alt: "מרפסת תלויה מתכת, פלדה וברזל לפי תכנון אדריכלי" },
-    { src: "/images/heavy/4.jpg", alt: "חיזוק מבנה עם שלד מתכת, פלדה וברזל מותאם אישית" },
-    { src: "/images/heavy/5.jpg", alt: "גלריה תעשייתית ממתכת, פלדה וברזל לפרויקטים כבדים" }
+    { src: "/public/images/heavy/1.jpg", alt: "קונסטרוקציית מתכת, פלדה וברזל למבנה תעשייתי" },
+    { src: "/public/images/heavy/2.jpg", alt: "גלריית מתכת, פלדה וברזל לחיזוק מבנה קיים" },
+    { src: "/public/images/heavy/3.jpg", alt: "מרפסת תלויה מתכת, פלדה וברזל לפי תכנון אדריכלי" },
+    { src: "/public/images/heavy/4.jpg", alt: "חיזוק מבנה עם שלד מתכת, פלדה וברזל מותאם אישית" },
+    { src: "/public/images/heavy/5.jpg", alt: "גלריה תעשייתית ממתכת, פלדה וברזל לפרויקטים כבדים" }
   ];
 
   return (

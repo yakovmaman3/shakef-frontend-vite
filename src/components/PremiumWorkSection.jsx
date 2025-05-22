@@ -3,11 +3,11 @@ import ImageSlider from "./ImageSlider";
 
 export default function PremiumWorkSection() {
   const images = [
-    { src: "/images/premium/1.jpg", alt: "שער מתכת, ברזל ופלדה מעוצב בהתאמה אישית" },
-    { src: "/images/premium/2.jpg", alt: "מעקה מתכת, ברזל ופלדה ייחודי לבית פרטי" },
-    { src: "/images/premium/3.jpg", alt: "ריהוט ממתכת, ברזל ופלדה בסגנון מודרני" },
-    { src: "/images/premium/4.jpg", alt: "מדרגות מתכת, ברזל ופלדה איכותיות לחלל מגורים" },
-    { src: "/images/premium/5.jpg", alt: "שער מתכת, פלדה וברזל מודרני לבית יוקרתי" }
+    { src: "/public/images/premium/1.jpg", alt: "שער מתכת, ברזל ופלדה מעוצב בהתאמה אישית" },
+    { src: "/public/images/premium/2.jpg", alt: "מעקה מתכת, ברזל ופלדה ייחודי לבית פרטי" },
+    { src: "/public/images/premium/3.jpg", alt: "ריהוט ממתכת, ברזל ופלדה בסגנון מודרני" },
+    { src: "/public/images/premium/4.jpg", alt: "מדרגות מתכת, ברזל ופלדה איכותיות לחלל מגורים" },
+    { src: "/public/images/premium/5.jpg", alt: "שער מתכת, פלדה וברזל מודרני לבית יוקרתי" }
   ];
 
   return (
