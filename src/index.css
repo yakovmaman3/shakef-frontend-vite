@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  user-select: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .ios-fix {
+    background-attachment: scroll !important;
+  }
+}
+
+.scrolled-mobile .navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 55px;
+  overflow: hidden;
+}
+
+.scrolled-mobile .navbar-logo {
+  transform: none;
+}
+
+.scrolled-mobile .navbar-links {
+  transform: none;
+}
+
+.scrolled-mobile .navbar-motto {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.navbar,
+.navbar-logo,
+.navbar-links,
+.navbar-motto {
+  transition: all 0.4s ease;
+  will-change: transform, opacity, padding, height;
+}

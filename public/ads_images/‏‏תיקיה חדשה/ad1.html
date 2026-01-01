@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakef Ad</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('ad_image.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      top: 55px;
+      left: 580px;
+      text-align: right;
+      line-height: 1.2;
+    }
+    .logo h1 {
+      font-size: 46px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .logo p {
+      font-size: 18px;
+      margin: 0;
+      margin-top: -5px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+    .content {
+      position: absolute;
+      top: 188px;
+      left: 50px;
+      max-width: 650px;
+      font-size: 28px;
+      line-height: 1.9;
+      text-align: right;
+      font-weight: 500;
+    }
+    .content p {
+      margin-bottom: 20px;
+    }
+    .areas {
+      position: absolute;
+      bottom: 315px;
+      left: 410px;
+      font-size: 22px;
+      color: white;
+      font-weight: 600;
+      text-align: right;
+    }
+    .phone {
+      position: absolute;
+      bottom: 313px;
+      left: 111px;
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      text-align: right;
+    }
+    .save-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #f87171;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 1000;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <button class="save-button" onclick="saveScreenshot()">שמור כתמונה</button>
+
+  <div class="logo">
+    <h1>שַׁקֵּף</h1>
+    <p>עבודות מתכת</p>
+  </div>
+
+  <div class="content">
+    <p>אנו מתמחים בעבודות מתכת קלות וכבדות — החל ממעקות, שערים, ריהוט וברזל מעוצב ועד לפרויקטים כבדים כגון מרפסות, קונסטרוקציות, שלדי מבנים ומערכות מיוחדות.</p>
+  </div>
+
+  <div class="areas">
+    <span style="color:red;">⚑</span> אזורי פעילות: השרון והמרכז
+  </div>
+
+  <div class="phone">
+    0552270388 ☎️
+  </div>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script>
+    function saveScreenshot() {
+      html2canvas(document.body).then(function(canvas) {
+        let link = document.createElement('a');
+        link.download = 'shakef_ad.png';
+        link.href = canvas.toDataURL();
+        link.click();
+      });
+    }
+  </script>
+</body>
+</html>
