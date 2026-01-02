@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  user-select: none;
-}
-
 @supports (-webkit-touch-callout: none) {
   .ios-fix {
     background-attachment: scroll !important;
@@ -39,3 +35,7 @@ body {
   transition: all 0.4s ease;
   will-change: transform, opacity, padding, height;
 }
+
+/* Accessibility: keep visible focus */
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
