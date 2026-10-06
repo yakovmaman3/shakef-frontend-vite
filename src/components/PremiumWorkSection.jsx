@@ -3,27 +3,65 @@ import ImageSlider from "./ImageSlider";
 
 export default function PremiumWorkSection() {
   const images = [
-    { src: "/images/premium/1.jpg", alt: "שער מתכת, ברזל ופלדה מעוצב בהתאמה אישית" },
-    { src: "/images/premium/2.jpg", alt: "מעקה מתכת, ברזל ופלדה ייחודי לבית פרטי" },
-    { src: "/images/premium/3.jpg", alt: "ריהוט ממתכת, ברזל ופלדה בסגנון מודרני" },
-    { src: "/images/premium/4.jpg", alt: "מדרגות מתכת, ברזל ופלדה איכותיות לחלל מגורים" },
-    { src: "/images/premium/5.jpg", alt: "שער מתכת, פלדה וברזל מודרני לבית יוקרתי" }
+    {
+      src: "/images/premium/1.png",
+      alt: "מדרגות מתכת בעיצוב וביצוע בהתאמה אישית",
+    },
+    {
+      src: "/images/premium/2.jpg",
+      alt: "מדרגות מתכת מעוצבות לחלל מגורים",
+    },
+    {
+      src: "/images/premium/3.jpg",
+      alt: "עבודת מתכת מדויקת בעיצוב אדריכלי",
+    },
+    {
+      src: "/images/premium/4.jpg",
+      alt: "מדרגות מתכת ופלדה ברמת גימור גבוהה",
+    },
+    {
+      src: "/images/premium/5.jpg",
+      alt: "שער ועבודת מתכת מודרנית בהתאמה אישית",
+    },
+    {
+      src: "/images/premium/6.jpg",
+      alt: "פרויקט מתכת בהתאמה אישית",
+    },
+    {
+      src: "/images/premium/7.jpg",
+      alt: "עבודת מסגרות ומתכת ברמת גימור גבוהה",
+    },
+    {
+      src: "/images/premium/8.jpg",
+      alt: "עבודת מתכת מעוצבת לפי דרישות הלקוח",
+    },
   ];
 
   return (
-    <section className="px-6 py-16 max-w-6xl mx-auto text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">עבודות בעיצוב אישי וברמת גימור גבוהה</h2>
+    <section className="py-16 px-6 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            מדרגות ועבודות מתכת ברמת גימור גבוהה
+          </h2>
 
-      <p className="text-gray-200 mb-6 leading-relaxed text-[1.05rem] tracking-tight font-light">
-        עיצוב אישי, תשומת לב לפרטים הקטנים, שילוב בין יופי לחומר.
-        <br />
-        אנו יוצרים שערים מעוצבים, מעקות בהתאמה אישית, מדרגות וריהוט מתכתי ייחודי — תוך שילוב של פונקציונליות עם אסתטיקה גבוהה.
-        <br />
-        מתמחים בעבודות מתכת יוקרתיות לבתים פרטיים, משרדים, מסעדות, אולמות אירועים ומרחבים מעוצבים.
-      </p>
+          <p className="text-gray-200 text-lg leading-relaxed">
+            אנו מבצעים מגוון רחב של עבודות מתכת בהתאמה אישית, עם דגש על
+            תכנון מדויק, ביצוע מקצועי וגימור איכותי.
+            <br />
+            <br />
+            אחד מתחומי ההתמחות המרכזיים שלנו הוא תכנון וביצוע מדרגות מתכת –
+            מדרגות קורה מרכזית, מדרגות מרחפות, מדרגות עם סיבובים ופתרונות
+            מיוחדים המותאמים למבנה ולעיצוב.
+            <br />
+            <br />
+            בפרויקטים הדורשים תכנון מפורט ניתן לבצע תכנון ב־SolidWorks לפני
+            הייצור, כדי להגיע לדיוק גבוה בחלקי הפלדה, בחיבורים ובגאומטריה של
+            הפרויקט.
+          </p>
+        </div>
 
-      <div className="rounded-lg overflow-hidden shadow-lg">
-        <ImageSlider images={images} interval={2800} />
+        <ImageSlider images={images} />
       </div>
     </section>
   );
