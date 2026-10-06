@@ -38,29 +38,27 @@ export default function PremiumWorkSection() {
   ];
 
   return (
-    <section className="py-16 px-6 max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            מדרגות ועבודות מתכת ברמת גימור גבוהה
-          </h2>
+    <section className="py-16 px-6 max-w-6xl mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        מדרגות ועבודות מתכת ברמת גימור גבוהה
+      </h2>
 
-          <p className="text-gray-200 text-lg leading-relaxed">
-            אנו מבצעים מגוון רחב של עבודות מתכת בהתאמה אישית, עם דגש על
-            תכנון מדויק, ביצוע מקצועי וגימור איכותי.
-            <br />
-            <br />
-            אחד מתחומי ההתמחות המרכזיים שלנו הוא תכנון וביצוע מדרגות מתכת –
-            מדרגות קורה מרכזית, מדרגות מרחפות, מדרגות עם סיבובים ופתרונות
-            מיוחדים המותאמים למבנה ולעיצוב.
-            <br />
-            <br />
-            בפרויקטים הדורשים תכנון מפורט ניתן לבצע תכנון ב־SolidWorks לפני
-            הייצור, כדי להגיע לדיוק גבוה בחלקי הפלדה, בחיבורים ובגאומטריה של
-            הפרויקט.
-          </p>
-        </div>
+      <p className="text-gray-200 text-lg leading-relaxed mb-8">
+        אנו מבצעים מגוון רחב של עבודות מתכת בהתאמה אישית, עם דגש על
+        תכנון מדויק, ביצוע מקצועי וגימור איכותי.
+        <br />
+        <br />
+        אחד מתחומי ההתמחות המרכזיים שלנו הוא תכנון וביצוע מדרגות מתכת –
+        מדרגות קורה מרכזית, מדרגות מרחפות, מדרגות עם סיבובים ופתרונות
+        מיוחדים המותאמים למבנה ולעיצוב.
+        <br />
+        <br />
+        בפרויקטים הדורשים תכנון מפורט ניתן לבצע תכנון ב־SolidWorks לפני
+        הייצור, כדי להגיע לדיוק גבוה בחלקי הפלדה, בחיבורים ובגאומטריה של
+        הפרויקט.
+      </p>
 
+      <div className="rounded-lg overflow-hidden shadow-lg">
         <ImageSlider images={images} />
       </div>
     </section>
