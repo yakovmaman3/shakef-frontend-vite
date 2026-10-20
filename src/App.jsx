@@ -90,6 +90,12 @@ function App() {
         throw new Error("Contact request failed");
       }
 
+      // Google Tag Manager - successful contact form submission
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "contact_form_success",
+      });
+
       form.reset();
 
       setActiveSection(null);
