@@ -59,7 +59,7 @@ export default function ImageSlider({ images = [], interval = 3000 }) {
   }
 
   return (
-    <div className="relative w-full h-[360px] md:h-[480px] overflow-hidden bg-neutral-800 group">
+    <div className="relative w-full h-[360px] md:h-[480px] overflow-hidden bg-neutral-900 group">
       {visibleImages.map((img, index) => {
         const src = typeof img === "string" ? img : img?.src;
         const alt =
@@ -75,7 +75,7 @@ export default function ImageSlider({ images = [], interval = 3000 }) {
             onError={() => markAsFailed(src)}
             aria-hidden={index !== current}
             className={[
-              "absolute inset-0 w-full h-full object-cover",
+              "absolute inset-0 w-full h-full object-contain",
               prefersReducedMotion ? "" : "transition-opacity duration-700 ease-in-out",
               index === current ? "opacity-100" : "opacity-0 pointer-events-none",
             ].join(" ")}
