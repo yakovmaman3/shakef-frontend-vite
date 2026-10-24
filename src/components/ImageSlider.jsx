@@ -59,7 +59,7 @@ export default function ImageSlider({ images = [], interval = 3000 }) {
   }
 
   return (
-    <div className="relative w-full h-[360px] md:h-[480px] overflow-hidden bg-neutral-900 group">
+    <div className="relative w-full h-[360px] md:h-[480px] overflow-hidden bg-[#4F4F4F] group">
       {visibleImages.map((img, index) => {
         const src = typeof img === "string" ? img : img?.src;
         const alt =
