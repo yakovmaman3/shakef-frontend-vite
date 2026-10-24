@@ -34,6 +34,12 @@ export default function ContactSection() {
       });
 
       if (res.ok) {
+        // Send successful form submission event to Google Tag Manager
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "contact_form_success",
+        });
+
         alert("ההודעה נשלחה בהצלחה!");
         e.target.reset();
       } else {
@@ -56,8 +62,8 @@ export default function ContactSection() {
         </h2>
 
         <p className="mb-6">
-          מתכננים מדרגות, קונסטרוקציה או עבודת מתכת מיוחדת?
-          השאירו פרטים ונחזור אליכם בהקדם.
+          מתכננים פרויקט מתכת? השאירו פרטים ונחזור אליכם בהקדם
+          כדי להבין את הצורך ולבדוק איך נוכל לעזור.
         </p>
 
         <form

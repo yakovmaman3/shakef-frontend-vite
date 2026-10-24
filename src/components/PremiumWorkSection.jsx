@@ -5,19 +5,19 @@ export default function PremiumWorkSection() {
   const images = [
     {
       src: "/images/premium/1.png",
-      alt: "מדרגות מתכת בעיצוב וביצוע בהתאמה אישית",
+      alt: "עבודת מתכת בעיצוב אישי וברמת גימור גבוהה",
     },
     {
       src: "/images/premium/2.jpg",
-      alt: "מדרגות מתכת מעוצבות לחלל מגורים",
+      alt: "אלמנט מתכת מעוצב בהתאמה לחלל",
     },
     {
       src: "/images/premium/3.jpg",
-      alt: "עבודת מתכת מדויקת בעיצוב אדריכלי",
+      alt: "עבודת מתכת מדויקת לפי תכנון אדריכלי",
     },
     {
       src: "/images/premium/4.jpg",
-      alt: "מדרגות מתכת ופלדה ברמת גימור גבוהה",
+      alt: "פרויקט מתכת בהתאמה אישית וברמת גימור גבוהה",
     },
     {
       src: "/images/premium/5.jpg",
@@ -25,7 +25,7 @@ export default function PremiumWorkSection() {
     },
     {
       src: "/images/premium/6.jpg",
-      alt: "פרויקט מתכת בהתאמה אישית",
+      alt: "פרויקט מתכת בעיצוב אישי",
     },
     {
       src: "/images/premium/7.jpg",
@@ -39,26 +39,23 @@ export default function PremiumWorkSection() {
 
   return (
     <section className="py-16 px-6 max-w-6xl mx-auto text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-        מדרגות ועבודות מתכת ברמת גימור גבוהה
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
+        עבודות מתכת בעיצוב אישי וברמת גימור גבוהה
       </h2>
 
-      <p className="text-gray-200 text-lg leading-relaxed mb-8">
-        אנו מבצעים מגוון רחב של עבודות מתכת בהתאמה אישית, עם דגש על
-        תכנון מדויק, ביצוע מקצועי וגימור איכותי.
+      <p className="text-gray-200 text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
+        פרויקטים שבהם המתכת היא חלק מהעיצוב דורשים לא רק ביצוע נכון,
+        אלא גם תשומת לב לפרופורציות, לחיבורים ולפרטים הקטנים.
         <br />
         <br />
-        אחד מתחומי ההתמחות המרכזיים שלנו הוא תכנון וביצוע מדרגות מתכת –
-        מדרגות קורה מרכזית, מדרגות מרחפות, מדרגות עם סיבובים ופתרונות
-        מיוחדים המותאמים למבנה ולעיצוב.
+        אנו מבצעים מעקות, שערים, ריהוט ואלמנטים אדריכליים ממתכת בהתאמה
+        אישית, לפי תכנון קיים או תוך פיתוח פתרון שמתאים לחלל ולשפה העיצובית.
         <br />
         <br />
-        בפרויקטים הדורשים תכנון מפורט ניתן לבצע תכנון ב־SolidWorks לפני
-        הייצור, כדי להגיע לדיוק גבוה בחלקי הפלדה, בחיבורים ובגאומטריה של
-        הפרויקט.
+        המטרה היא להגיע לתוצאה נקייה, מדויקת ואיכותית שנראית נכון גם מקרוב.
       </p>
 
-      <div className="rounded-lg overflow-hidden shadow-lg">
+      <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10">
         <ImageSlider images={images} />
       </div>
     </section>

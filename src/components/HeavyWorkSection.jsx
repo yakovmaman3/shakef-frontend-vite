@@ -27,33 +27,25 @@ export default function HeavyWorkSection() {
 
   return (
     <section className="px-6 py-16 max-w-6xl mx-auto text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-        עבודות מסגרות כבדה ותכנון מדויק
+      <h2 className="text-3xl md:text-4xl font-bold mb-5 text-white">
+        מסגרות כבדה וקונסטרוקציות פלדה
       </h2>
 
-      <p className="text-gray-200 mb-6 leading-relaxed text-[1.05rem] tracking-tight font-light">
-        שילוב בין עוצמה, הנדסה ודיוק.
+      <p className="text-gray-200 mb-8 leading-relaxed text-lg max-w-4xl mx-auto">
+        ביצוע קונסטרוקציות פלדה, גלריות, מרפסות, חיזוקי מבנים, שלדים
+        ותשתיות מתכת בהתאם לתוכניות ולדרישות הפרויקט.
         <br />
-
-        אנו מבצעים קונסטרוקציות פלדה, מרפסות תלויות,
-        חיזוקי מבנים, מדרגות מתכת, גלריות תעשייתיות
-        ותשתיות ברזל לפי תוכנית.
         <br />
-
-        בפרויקטים הדורשים תכנון מפורט ניתן לבצע תכנון
-        ב־SolidWorks לפני הייצור, לצורך התאמת חלקי הפלדה
-        והחיבורים לפרויקט.
+        אנו שמים דגש על התאמה מדויקת לתנאי השטח, פרטי חיבור ועיגון,
+        סדר ייצור נכון וביצוע מקצועי משלב התכנון ועד ההתקנה.
         <br />
-
-        ביצוע עבור לקוחות פרטיים, קבלנים, מהנדסים ויזמים —
-        ברמת גימור גבוהה ובהתאם לתכנון ולדרישות הפרויקט.
+        <br />
+        עבודה עבור קבלנים, מהנדסים, יזמים ולקוחות פרטיים בפרויקטים
+        הדורשים אחריות, תיאום ורמת ביצוע גבוהה.
       </p>
 
-      <div className="rounded-lg overflow-hidden shadow-lg">
-        <ImageSlider
-          images={images}
-          interval={2800}
-        />
+      <div className="rounded-xl overflow-hidden shadow-2xl border border-white/10">
+        <ImageSlider images={images} interval={2800} />
       </div>
     </section>
   );

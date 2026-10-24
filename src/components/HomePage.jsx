@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import IntroSection from "./IntroSection";
 import HeavyWorkSection from "./HeavyWorkSection";
+import StairsSection from "./StairsSection";
 import PremiumWorkSection from "./PremiumWorkSection";
 import VisionSection from "./VisionSection";
 
@@ -37,6 +38,7 @@ export default function HomePage({ setActiveSection, onPhoneClick }) {
       <main id="main" className="bg-[#4f4f4f]" tabIndex={-1}>
         <IntroSection setShowPhone={onPhoneClick} />
         <HeavyWorkSection />
+        <StairsSection />
         <PremiumWorkSection />
         <VisionSection />
       </main>
